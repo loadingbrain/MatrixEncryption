@@ -51,7 +51,28 @@ body {
     border-radius: 10px; /* Add rounded corners for a nicer look */
     color: green; 
 }
+body {
+    background: linear-gradient(to right, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9900cc, #ff33cc);
+    background-size: 1400% 100%;
+    animation: rainbowBackground 30s linear infinite;
+    background-color: #000;
+    color: #00FF00;
+    font-family: "Lucida";
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
 
+@keyframes rainbowBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1400% 0;
+    }
+}
 @keyframes fallAnimation {
     from {
         transform: translateY(-100%);
