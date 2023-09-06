@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_templates, request
 
 app = Flask(__name__)
 
@@ -23,8 +23,8 @@ def index():
         message = request.form['message']
         shift = int(request.form['shift'])
         encrypted_message = caesar_cipher_encrypt(message, shift)
-        return render_template('index.html', encrypted_message=encrypted_message)
-    return render_template('index.html', encrypted_message=None)
+        return render_templates('index.html', encrypted_message=encrypted_message)
+    return render_templates('index.html', encrypted_message=None)
 
 if __name__ == '__main__':
     app.run(debug=True)
